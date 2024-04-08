@@ -7,8 +7,7 @@ const singleUserData = require('./src/routes/singleUserData/index')
 const updateUserData = require('./src/routes/updateUserData/index')
 const allUsers = require('./src/routes/allUsers/index')
 const app = express();
-const port = process.env.PORT || 3000;
-require('dotenv').config()
+const port = process.env.PORT || 5000;
 
 
 

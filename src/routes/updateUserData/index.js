@@ -9,6 +9,7 @@ router.put('/updateUserData/:id', async (req, res) => {
         ...data
     }
     const result = await Users.findByIdAndUpdate(id, updatedData, { new: true })
+   
     res.send(result)
 })
 module.exports = router

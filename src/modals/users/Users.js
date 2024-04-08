@@ -18,7 +18,7 @@ const UsersSchema = new Schema({
         required: true
     },
     whyICame: {
-        type: String
+        type: Object
     },
     image: {
         type: String
