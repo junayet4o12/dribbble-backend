@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const connectDB = require('./src/DB/connectDB');
 const applyMiddleWare = require('./src/middlewares/applyMiddlewares');
+const checkExistingUserName = require('./src/routes/checkExistingUserName/index')
 const addUser = require('./src/routes/addUser/index')
 const singleUserData = require('./src/routes/singleUserData/index')
 const updateUserData = require('./src/routes/updateUserData/index')
@@ -12,6 +13,7 @@ const port = process.env.PORT || 5000;
 
 
 applyMiddleWare(app)
+app.use(checkExistingUserName)
 app.use(addUser)
 app.use(singleUserData)
 app.use(updateUserData)
